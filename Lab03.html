@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img src="Down oads/logo.png" href="http://www.swin.edu.au" />
+    <h1>CWA Help Desk Appointment</h1>
+    <p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday</p>
+    <p>Check Blackboard for when CWA tutors will be there.</p>
+    <div>
+      <form action="/submit-form" method="post" style="padding: 8px;">
+        
+        <fieldset style="padding: 25px;">
+          <legend>Student Details</legend>
+          <div style="margin-bottom: 20px;">
+            <label for="id">Student ID <input type="text" id="id" name="id" pattern="^\d{7,10}$" required /></label>
+          </div>
+          <div>
+            <label for="given">Given Name <input type="text" id="given" name="given" pattern="^.{1,15}$" required /></label>
+            <label for="family">Family name <input type="text" id="family" name="family" pattern="^.{1,15}$" required /></label>
+          </div>
+        </fieldset>
+
+        <fieldset style="padding: 25px;">
+          <legend>Your Unit</legend>
+          <div>
+            <label for="unit" style="margin-right: 10px;">
+              <input id="unit" type="radio" name="unit" checked/> COS10011
+            </label>
+            <label for="unit" style="margin-right: 10px;">
+              <input id="unit" type="radio" name="unit"/> COS60004
+            </label>
+            <label for="unit" style="margin-right: 10px;">
+              <input id="unit" type="radio" name="unit"/> COS60007
+            </label>
+          </div>
+          <div style="margin-top: 20px;">
+            <label for="dropdown">Your Tutor
+              <select id="dropdown" name="dropdown">
+                <option value="">Please Select</option>
+                <option value="1">Mr. Doncic</option>
+                <option value="2">Mr. James</option>
+                <option value="3">Ms. Reeves</option>
+                <option value="4">Ms. Hachimura</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset style="padding: 25px;">
+          <legend>Issue</legend>
+          <div style="margin-bottom: 10px;">
+            <label for="choice1" style="margin-right: 10px;" > HTML <input type="checkbox" id="choice1" name="choice1" value="Option1" checked /></label>
+            <label for="choice2" style="margin-right: 10px;"> CSS <input type="checkbox" id="choice1" name="choice2" value="Option2" /></label>
+            <label for="choice3" style="margin-right: 10px;"> JavaScript <input type="checkbox" id="choice1" name="choice3" value="Option3" /></label>
+            <label for="choice4" style="margin-right: 10px;"> PHP <input type="checkbox" id="choice1" name="choice4" value="Option4" /></label>
+            <label for="choice5" style="margin-right: 10px;"> MySQL <input type="checkbox" id="choice1" name="choice5" value="Option5" /></label>
+          </div>
+          <div>
+            <label style="display: block;">Description of Issue</label>
+            <textarea rows="7" cols="40" placeholder="Write description of your problem here..."></textarea>
+          </div>
+        </fieldset>
+        <fieldset>
+           <legend>Preferred Date/Time</legend>
+           <div>
+             <label for="date" style="margin-right: 10px;">Date     <input type="text" id="date" name="date" pattern="^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$" placeholder="dd/mm/yyyy" required  /> </label>
+           </div>
+           <div>
+             <label for="time" style="margin-right: 10px;">Time <input type="text" id="time" name="time" pattern="^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$" placeholder="00:00" required  /> </label>
+           </div>
+        </fieldset>
+        <button type="submit" style="padding: 6px;">Book</button>
+        <button type="reset" style="padding: 6px;">Reset Form</button>
+      </form>
+    </div>
+  </body>
+</html>
